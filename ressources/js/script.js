@@ -1,8 +1,8 @@
 $('document').ready(function() {
 
-    $('#addpass, #confirmpass').on('change', function() {
-        var pass = $('#addpass'),
-            confirmpass = $('#confirmpass');
+    $('input[name=addpass], input[name=confirmpass]').on('change', function() {
+        var pass = $('input[name=addpass]'),
+            confirmpass = $('input[name=confirmpass]');
         if (pass.val() == confirmpass.val()) {
             $('#createButton').prop('disabled', false);
         } else { $('#createButton').prop('disabled', true); }

@@ -15,18 +15,18 @@
     <div id="loginForm">
         <form method="post" action="index.php">
             <input type="hidden" name="act" value="login">
-            <input type="text" pattern=".{6,20}" id="username" required title="8 to 20 characters">
-            <input type="password" pattern=".{8,20}" id="userpass" required title="8 to 20 characters">
+            <input type="text" pattern=".{6,20}" name="username" required title="8 to 20 characters">
+            <input type="password" pattern=".{8,20}" name="userpass" required title="8 to 20 characters">
             <button>SUBMIT</button>
         </form>
     </div>
     <div hidden id="createAccountForm">
         <form method="post" action="index.php">
             <input type="hidden" name="act" value="create">
-            <input type="text" pattern=".{6,20}" id="addname" required title="8 to 20 characters">
-            <input type="password" pattern=".{8,20}" placeholder="Password" id="addpass" required title="8 to 20 characters and the same ">
-            <input type="password" pattern=".{8,20}" placeholder="Confirm Password" id="confirmpass" required title="8 to 20 characters and the same ">
-            <input type="email" id="addmail" required>
+            <input type="text" pattern=".{6,20}" name="addname" required title="8 to 20 characters">
+            <input type="password" pattern=".{8,20}" placeholder="Password" name="addpass" required title="8 to 20 characters and the same ">
+            <input type="password" pattern=".{8,20}" placeholder="Confirm Password" name="confirmpass" required title="8 to 20 characters and the same ">
+            <input type="email" name="addmail" required>
             <button id="createButton" disabled>SUBMIT</button>
         </form>
     </div>
