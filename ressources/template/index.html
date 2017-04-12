@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>PHP Test</title>
+    <link rel="stylesheet" href="/ressources/css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="/ressources/js/script.js"></script>
+</head>
+
+<body>
+    <button id="createAccount">Créer un compte</button>
+    <button hidden id="alreadyCreated">Se connecter avec un compte existant</button>
+    <div id="loginForm">
+        <form method="post" action="index.php">
+            <input type="hidden" name="act" value="login">
+            <input type="text" pattern=".{6,20}" id="username" required title="8 to 20 characters">
+            <input type="password" pattern=".{8,20}" id="userpass" required title="8 to 20 characters">
+            <button>SUBMIT</button>
+        </form>
+    </div>
+    <div hidden id="createAccountForm">
+        <form method="post" action="index.php">
+            <input type="hidden" name="act" value="create">
+            <input type="text" pattern=".{6,20}" id="addname" required title="8 to 20 characters">
+            <input type="password" pattern=".{8,20}" placeholder="Password" id="addpass" required title="8 to 20 characters and the same ">
+            <input type="password" pattern=".{8,20}" placeholder="Confirm Password" id="confirmpass" required title="8 to 20 characters and the same ">
+            <input type="email" id="addmail" required>
+            <button id="createButton" disabled>SUBMIT</button>
+        </form>
+    </div>
+</body>
+
+</html>
